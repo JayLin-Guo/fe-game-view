@@ -1,6 +1,6 @@
 /**
- * 星星粒子类
- * 管理单个星星的生命周期、动画和渲染
+ * 爱心粒子类
+ * 管理单个爱心的生命周期、动画和渲染
  */
 
 import {
@@ -213,8 +213,8 @@ export class ParticleFactory {
   static createStar(
     x: number,
     y: number,
-    theme: StarTheme = 'game',
-    sizeRange: [number, number] = [12, 20]
+    theme: StarTheme = 'kawaii',
+    sizeRange: [number, number] = [14, 22]
   ): StarParticle {
     const colors = starThemes[theme]
     const color = colors[Math.floor(Math.random() * colors.length)]
@@ -229,7 +229,7 @@ export class ParticleFactory {
       iconType,
       lifeTime: 1200 + Math.random() * 800, // 1.2-2秒生命周期
       fadeOutDuration: 600, // 0.6秒淡出时间
-      rotationSpeed: (Math.random() - 0.5) * 90, // 随机旋转速度
+      rotationSpeed: (Math.random() - 0.5) * 45, // 爱心旋转更轻柔
     })
   }
 }

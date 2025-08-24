@@ -12,10 +12,10 @@
 
 <script setup lang="ts">
   import { computed } from 'vue'
-  import { starIcons, type StarIconType } from './star-icons'
+  import { heartIcons, type HeartIconType } from './star-icons'
 
   interface Props {
-    type?: StarIconType
+    type?: HeartIconType
     size?: number | string
     color?: string
   }
@@ -23,10 +23,10 @@
   const props = withDefaults(defineProps<Props>(), {
     type: 'classic',
     size: 16,
-    color: '#FFD700',
+    color: '#FF69B4',
   })
 
-  const iconConfig = computed(() => starIcons[props.type])
+  const iconConfig = computed(() => heartIcons[props.type])
 </script>
 
 <style scoped>
@@ -36,5 +36,6 @@
     transition: all 0.3s ease;
     pointer-events: none;
     user-select: none;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
   }
 </style>

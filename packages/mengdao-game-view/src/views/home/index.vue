@@ -89,8 +89,8 @@
         <h2>🌟 特效测试 🌟</h2>
         <div class="test-buttons">
           <button class="common-button1" @click="testCursorTrail">
-            <span class="btn-icon">✨</span>
-            <span class="btn-text">测试鼠标跟随特效</span>
+            <span class="btn-icon">💖</span>
+            <span class="btn-text">测试爱心跟随特效</span>
           </button>
           <router-link to="/cursor-test" class="common-button1" style="text-decoration: none;">
             <span class="btn-icon">🧪</span>
@@ -147,8 +147,8 @@
   
   // 测试鼠标跟随特效
   const testCursorTrail = () => {
-    console.log('🌟 测试鼠标跟随特效')
-    alert('请移动鼠标查看星星跟随效果！如果没有看到效果，请检查浏览器控制台是否有错误信息。')
+    console.log('💖 测试爱心跟随特效')
+    alert('请移动鼠标查看可爱的爱心跟随效果！💖 如果没有看到效果，请检查浏览器控制台是否有错误信息。')
   }
 </script>
 <style lang="scss" scoped>
