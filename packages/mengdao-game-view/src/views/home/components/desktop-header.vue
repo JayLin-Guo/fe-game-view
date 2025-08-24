@@ -62,7 +62,9 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       margin-right: 30px;
-
+      //   text-shadow: 2px 2px 4px rgba(255, 182, 193, 0.3);
+      //   text-shadow: 3px 0px 3px #f8e5fb;
+      //   background: radial-gradient(0deg, #f1aedf 0%, #d682bf 52%, #a0a8e9 100%);
       .sparkle {
         color: #ffffff;
         text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);

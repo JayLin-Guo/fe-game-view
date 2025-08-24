@@ -26,7 +26,7 @@ export function useHeaderHeight() {
   const applyHeaderHeight = () => {
     const pageRoot = document.querySelector('.page-root') as HTMLElement
     if (pageRoot && currentHeaderHeight.value > 0) {
-      pageRoot.style.paddingTop = `${currentHeaderHeight.value}px`
+      pageRoot.style.paddingTop = `${currentHeaderHeight.value + 30}px`
       console.log('已设置page-root padding-top:', `${currentHeaderHeight.value}px`)
     }
   }

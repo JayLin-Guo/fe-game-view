@@ -1,6 +1,7 @@
 <template>
   <div class="page-root" :class="{ 'desktop-container': isDesktop, 'mobile-container': isMobile }">
-    <div class="content-container">
+    <SimpleCursorTrail />
+      <div class="content-container">
       <DesktopHeader v-if="isDesktop" ref="desktopHeaderRef" />
       <MobileHeader v-if="isMobile" ref="mobileHeaderRef" />
       <section class="hero">
@@ -82,6 +83,21 @@
           </button>
         </div>
       </section>
+      
+      <!-- 测试特效按钮 -->
+      <section class="section test-section">
+        <h2>🌟 特效测试 🌟</h2>
+        <div class="test-buttons">
+          <button class="common-button1" @click="testCursorTrail">
+            <span class="btn-icon">✨</span>
+            <span class="btn-text">测试鼠标跟随特效</span>
+          </button>
+          <router-link to="/cursor-test" class="common-button1" style="text-decoration: none;">
+            <span class="btn-icon">🧪</span>
+            <span class="btn-text">进入测试页面</span>
+          </router-link>
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -92,6 +108,7 @@
   import { useHeaderHeight } from '@/composables/useHeaderHeight'
   import DesktopHeader from './components/desktop-header.vue'
   import MobileHeader from './components/mobile-header.vue'
+  import SimpleCursorTrail from '@/components/cursor-trail/SimpleCursorTrail.vue'
 
   const { isDesktop, isMobile } = useResponsiveScale()
 
@@ -127,6 +144,12 @@
       },
     ],
   })
+  
+  // 测试鼠标跟随特效
+  const testCursorTrail = () => {
+    console.log('🌟 测试鼠标跟随特效')
+    alert('请移动鼠标查看星星跟随效果！如果没有看到效果，请检查浏览器控制台是否有错误信息。')
+  }
 </script>
 <style lang="scss" scoped>
   @import './responsive-styles.scss';
@@ -176,7 +199,6 @@
 
     &:hover {
       background: linear-gradient(135deg, #ffc7dc 0%, #bee6ff 100%);
-      border: 2px solid #ffc7dc;
       color: #8b4b9c;
       transform: translateY(-3px);
       box-shadow: 0 8px 25px rgba(255, 199, 220, 0.4);

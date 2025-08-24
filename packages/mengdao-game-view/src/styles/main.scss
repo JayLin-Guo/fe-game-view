@@ -196,3 +196,24 @@ select {
 .transition-slow {
   transition: $transition-slow;
 }
+
+// 鼠标跟随特效样式
+.cursor-trail-star {
+  position: fixed;
+  pointer-events: none;
+  user-select: none;
+  z-index: 9999;
+  transform-origin: center;
+  will-change: transform, opacity;
+  
+  svg {
+    display: block;
+    fill: currentColor;
+  }
+}
+
+// 确保特效不会被其他元素遮挡
+body {
+  position: relative;
+  z-index: 1;
+}
