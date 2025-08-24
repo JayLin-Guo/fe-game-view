@@ -1,0 +1,119 @@
+// 移动端样式文件
+@import './variables.scss';
+
+// 移动端断点混合器
+@mixin mobile {
+  @media (max-width: #{$mobile-breakpoint - 1px}) {
+    @content;
+  }
+}
+
+// 移动端vw计算函数
+@function vw-mobile($px) {
+  @return calc(#{$px} / #{$mobile-design-width} * 100vw);
+}
+
+// 移动端基础样式
+html {
+  font-size: vw-mobile(16px);
+}
+
+body {
+  font-size: vw-mobile(14px);
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+// 移动端容器
+.container-mobile {
+  width: 100%;
+  padding: 0 vw-mobile(16px);
+  box-sizing: border-box;
+}
+
+// 移动端网格系统
+.grid-mobile {
+  display: grid;
+  gap: vw-mobile(16px);
+  
+  &.grid-1 { grid-template-columns: 1fr; }
+  &.grid-2 { grid-template-columns: 1fr 1fr; }
+  &.grid-3 { grid-template-columns: 1fr; }
+  &.grid-4 { grid-template-columns: 1fr 1fr; }
+}
+
+// 移动端卡片样式
+.card-mobile {
+  background: white;
+  border-radius: vw-mobile(8px);
+  padding: vw-mobile(16px);
+  box-shadow: $shadow-sm;
+  margin-bottom: vw-mobile(16px);
+}
+
+// 移动端按钮样式
+.btn-mobile {
+  display: inline-block;
+  padding: vw-mobile(12px) vw-mobile(24px);
+  border: none;
+  border-radius: vw-mobile(6px);
+  font-size: vw-mobile(14px);
+  cursor: pointer;
+  transition: $transition-fast;
+  
+  &.btn-primary {
+    background: $primary-color;
+    color: white;
+    
+    &:hover {
+      background: darken($primary-color, 10%);
+    }
+  }
+  
+  &.btn-secondary {
+    background: $secondary-color;
+    color: white;
+    
+    &:hover {
+      background: darken($secondary-color, 10%);
+    }
+  }
+}
+
+// 移动端字体大小类
+.text-mobile-xs { font-size: vw-mobile($font-size-xs); }
+.text-mobile-sm { font-size: vw-mobile($font-size-sm); }
+.text-mobile-base { font-size: vw-mobile($font-size-base); }
+.text-mobile-lg { font-size: vw-mobile($font-size-lg); }
+.text-mobile-xl { font-size: vw-mobile($font-size-xl); }
+.text-mobile-2xl { font-size: vw-mobile($font-size-2xl); }
+.text-mobile-3xl { font-size: vw-mobile($font-size-3xl); }
+
+// 移动端间距类
+.p-mobile-xs { padding: vw-mobile($spacing-xs); }
+.p-mobile-sm { padding: vw-mobile($spacing-sm); }
+.p-mobile-md { padding: vw-mobile($spacing-md); }
+.p-mobile-lg { padding: vw-mobile($spacing-lg); }
+.p-mobile-xl { padding: vw-mobile($spacing-xl); }
+
+.m-mobile-xs { margin: vw-mobile($spacing-xs); }
+.m-mobile-sm { margin: vw-mobile($spacing-sm); }
+.m-mobile-md { margin: vw-mobile($spacing-md); }
+.m-mobile-lg { margin: vw-mobile($spacing-lg); }
+.m-mobile-xl { margin: vw-mobile($spacing-xl); }
+
+// 移动端响应式工具类
+.hide-mobile {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.show-mobile {
+  display: none;
+  
+  @include mobile {
+    display: block !important;
+  }
+} 

@@ -1,0 +1,52 @@
+// 双设计稿基准变量
+$mobile-design-width: 375px;  // 移动端设计稿宽度
+$desktop-design-width: 1920px; // PC端设计稿宽度
+
+// 断点变量
+$mobile-breakpoint: 768px;
+$tablet-breakpoint: 1024px;
+$desktop-breakpoint: 1200px;
+
+// 颜色变量
+$primary-color: #409eff;
+$secondary-color: #67c23a;
+$success-color: #67c23a;
+$warning-color: #e6a23c;
+$danger-color: #f56c6c;
+$info-color: #909399;
+
+// 字体大小变量
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+$font-size-2xl: 24px;
+$font-size-3xl: 30px;
+$font-size-4xl: 36px;
+
+// 间距变量
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-2xl: 48px;
+$spacing-3xl: 64px;
+
+// 圆角变量
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+$border-radius-xl: 16px;
+
+// 阴影变量
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+$shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+$shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.25);
+
+// 过渡变量
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease; 

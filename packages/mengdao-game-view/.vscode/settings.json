@@ -1,0 +1,26 @@
+{
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "vue.codeActions.enabled": true,
+  "vue.format.enable": true,
+  "scss.validate": true,
+  "css.validate": true,
+  "less.validate": true,
+  "emmet.includeLanguages": {
+    "vue": "html",
+    "vue-html": "html"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "files.associations": {
+    "*.vue": "vue"
+  }
+} 

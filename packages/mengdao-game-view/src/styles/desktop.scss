@@ -1,0 +1,154 @@
+// PC端样式文件
+@import './variables.scss';
+
+// PC端断点混合器
+@mixin desktop {
+  @media (min-width: #{$desktop-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$mobile-breakpoint}) and (max-width: #{$tablet-breakpoint - 1px}) {
+    @content;
+  }
+}
+
+// PC端vw计算函数
+@function vw-pc($px) {
+  @return calc(#{$px} / #{$desktop-design-width} * 100vw);
+}
+
+// PC端基础样式
+html {
+  font-size: vw-pc(16px);
+}
+
+body {
+  font-size: vw-pc(14px);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+// PC端容器
+.container-desktop {
+  width: 100%;
+  max-width: vw-pc(1200px);
+  margin: 0 auto;
+  padding: 0 vw-pc(24px);
+  box-sizing: border-box;
+}
+
+// PC端网格系统
+.grid-desktop {
+  display: grid;
+  gap: vw-pc(24px);
+  
+  &.grid-1 { grid-template-columns: 1fr; }
+  &.grid-2 { grid-template-columns: 1fr 1fr; }
+  &.grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+  &.grid-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+}
+
+// PC端卡片样式
+.card-desktop {
+  background: white;
+  border-radius: vw-pc(12px);
+  padding: vw-pc(24px);
+  box-shadow: $shadow-md;
+  margin-bottom: vw-pc(24px);
+  transition: $transition-normal;
+  
+  &:hover {
+    box-shadow: $shadow-lg;
+    transform: translateY(-2px);
+  }
+}
+
+// PC端按钮样式
+.btn-desktop {
+  display: inline-block;
+  padding: vw-pc(16px) vw-pc(32px);
+  border: none;
+  border-radius: vw-pc(8px);
+  font-size: vw-pc(16px);
+  cursor: pointer;
+  transition: $transition-normal;
+  
+  &.btn-primary {
+    background: $primary-color;
+    color: white;
+    
+    &:hover {
+      background: darken($primary-color, 10%);
+      transform: translateY(-1px);
+    }
+  }
+  
+  &.btn-secondary {
+    background: $secondary-color;
+    color: white;
+    
+    &:hover {
+      background: darken($secondary-color, 10%);
+      transform: translateY(-1px);
+    }
+  }
+}
+
+// PC端字体大小类
+.text-desktop-xs { font-size: vw-pc($font-size-xs); }
+.text-desktop-sm { font-size: vw-pc($font-size-sm); }
+.text-desktop-base { font-size: vw-pc($font-size-base); }
+.text-desktop-lg { font-size: vw-pc($font-size-lg); }
+.text-desktop-xl { font-size: vw-pc($font-size-xl); }
+.text-desktop-2xl { font-size: vw-pc($font-size-2xl); }
+.text-desktop-3xl { font-size: vw-pc($font-size-3xl); }
+.text-desktop-4xl { font-size: vw-pc($font-size-4xl); }
+
+// PC端间距类
+.p-desktop-xs { padding: vw-pc($spacing-xs); }
+.p-desktop-sm { padding: vw-pc($spacing-sm); }
+.p-desktop-md { padding: vw-pc($spacing-md); }
+.p-desktop-lg { padding: vw-pc($spacing-lg); }
+.p-desktop-xl { padding: vw-pc($spacing-xl); }
+.p-desktop-2xl { padding: vw-pc($spacing-2xl); }
+
+.m-desktop-xs { margin: vw-pc($spacing-xs); }
+.m-desktop-sm { margin: vw-pc($spacing-sm); }
+.m-desktop-md { margin: vw-pc($spacing-md); }
+.m-desktop-lg { margin: vw-pc($spacing-lg); }
+.m-desktop-xl { margin: vw-pc($spacing-xl); }
+.m-desktop-2xl { margin: vw-pc($spacing-2xl); }
+
+// PC端响应式工具类
+.hide-desktop {
+  @include desktop {
+    display: none !important;
+  }
+}
+
+.show-desktop {
+  display: none;
+  
+  @include desktop {
+    display: block !important;
+  }
+}
+
+// PC端特殊效果
+.hover-lift {
+  transition: $transition-normal;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-xl;
+  }
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+} 
