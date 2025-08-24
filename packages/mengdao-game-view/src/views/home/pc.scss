@@ -1,19 +1,33 @@
 .pc-container {
   width: 100vw;
+  max-width: 1920px;
+
   .content-container {
-    padding: 0px 20rem;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding-top: 80px;
   }
   header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     background: #ffffff;
     padding: 1rem 0;
     border-bottom: 2px dashed #e0e0e0;
-    position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding-left: 2rem;
     padding-right: 2rem;
+    z-index: 1000;
 
+    .header-container {
+      max-width: 1300px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
     &:after {
       content: '';
       position: absolute;
@@ -31,6 +45,7 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      margin-right: 60px;
 
       .sparkle {
         color: #ffffff;

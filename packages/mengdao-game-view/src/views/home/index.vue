@@ -1,7 +1,8 @@
 <template>
   <div :class="`${perClassName}-container`" class="page-root">
     <header>
-      <div class="logo">
+      <div class="header-container">
+        <div class="logo">
         萌夢島 <span class="sparkle">✨</span>
       </div>
       <div class="nav-container">
@@ -16,6 +17,8 @@
           <span>{{ item.label }}</span>
         </a>
       </div>
+      </div>
+
     </header>
 
     <div class="content-container">
@@ -125,15 +128,8 @@
 <style lang="scss" scoped>
   @import './pc.scss';
   .page-root {
-    background: linear-gradient(
-      135deg,
-      #ffe4e1 0%,
-      #e6e6fa 25%,
-      #e0ffff 50%,
-      #f0fff0 75%,
-      #fff8dc 100%
-    );
-    min-height: 100vh;
+
+    // min-height: 100vh;
   }
   .common-button1{
         display: flex;

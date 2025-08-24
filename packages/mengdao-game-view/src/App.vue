@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="min-h-screen bg-gray-50">
+  <div id="app">
     <!-- 首页时显示完整页面，其他页面显示管理后台布局 -->
     <router-view />
   </div>
@@ -23,6 +23,11 @@
 </script>
 
 <style scoped>
+  #app {
+    min-height: 100vh;
+    width: 100%;
+  }
+
   .el-header {
     height: 60px;
     line-height: 60px;
