@@ -1,7 +1,7 @@
 .pc-container {
   width: 100vw;
   max-width: 1920px;
-
+  padding-bottom: 20px;
   .content-container {
     margin: 0 auto;
     max-width: 1000px;
@@ -13,13 +13,13 @@
     left: 0;
     right: 0;
     background: #ffffff;
-    padding: 1rem 0;
-    border-bottom: 2px dashed #e0e0e0;
+    padding: 10px 0;
+    border-bottom: 1px dashed #e0e0e0;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 10px;
+    padding-right: 10px;
     z-index: 1000;
 
     .header-container {
@@ -148,8 +148,8 @@
   }
   .hero {
     text-align: center;
-    margin-bottom: 3rem;
-    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
     background-color: #fefefe;
     height: 155px;
     border-radius: 20px;
@@ -182,7 +182,7 @@
     h1 {
       font-size: 40px;
       font-weight: 700;
-      background: linear-gradient(90deg, #f0e6f5 0%, #a88beb 100%);
+      background: linear-gradient(90deg, #ff69b4 0%, #87ceeb 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -215,7 +215,10 @@
       line-height: 1.6;
       max-width: 800px;
       margin: 0 auto;
-      color: #bea0d2;
+      background: linear-gradient(90deg, #ff69b4 0%, #87ceeb 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       position: relative;
 
       &:before {
@@ -275,9 +278,9 @@
     backdrop-filter: blur(15px);
     border: 3px solid rgba(255, 182, 193, 0.3);
     border-radius: 25px;
-    padding: 2rem;
+    padding: 20px;
     box-shadow: 0 10px 40px rgba(255, 182, 193, 0.2);
-    margin-bottom: 3rem;
+    margin-bottom: 20px;
 
     .story-image-container {
       min-height: 200px;
@@ -294,10 +297,10 @@
     backdrop-filter: blur(15px);
     border: 3px solid rgba(255, 182, 193, 0.3);
     border-radius: 25px;
-    padding: 2rem;
+    padding: 20px;
     box-shadow: 0 10px 40px rgba(255, 182, 193, 0.2);
     overflow: hidden;
-    margin-bottom: 3rem;
+    margin-bottom: 20px;
 
     .login-image-container {
       min-height: 200px;
@@ -313,7 +316,7 @@
     display: flex;
     justify-content: space-around;
     gap: 30px;
-    margin-bottom: 3rem;
+    margin-bottom: 20px;
 
     .feature-card {
       width: 300px;
@@ -349,25 +352,25 @@
     backdrop-filter: blur(15px);
     border: 3px solid rgba(255, 182, 193, 0.3);
     border-radius: 25px;
-    padding: 3rem;
+    padding: 20px 80px;
     box-shadow: 0 10px 40px rgba(255, 182, 193, 0.2);
-
+    margin-bottom: 20px;
     h2 {
       text-align: center;
-      font-size: 2.5rem;
+      font-size: 40px;
       font-weight: 700;
       background: linear-gradient(45deg, #ff69b4, #87ceeb);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 2rem;
+      margin-bottom: 20px;
     }
 
     .news-item {
       background: rgba(255, 182, 193, 0.15);
-      padding: 1.5rem;
+      padding: 15px;
       border-radius: 15px;
-      margin-bottom: 1.5rem;
+      margin-bottom: 20px;
       color: #8b4b9c;
       border-left: 5px solid #ffb6c1;
       transition: all 0.3s ease;
@@ -394,12 +397,12 @@
 
   // 下载专区样式
   .download-section {
-    margin-bottom: 3rem;
+    margin-bottom: 20px;
 
     .download-buttons {
       display: flex;
       justify-content: center;
-      gap: 2rem;
+      gap: 20px;
       flex-wrap: wrap;
     }
   }
