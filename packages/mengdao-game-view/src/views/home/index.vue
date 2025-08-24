@@ -1,8 +1,8 @@
 <template>
   <div class="page-root" :class="{ 'desktop-container': isDesktop, 'mobile-container': isMobile }">
     <div class="content-container">
-      <DesktopHeader v-if="isDesktop" />
-      <MobileHeader v-if="isMobile" />
+      <DesktopHeader v-if="isDesktop" ref="desktopHeaderRef" />
+      <MobileHeader v-if="isMobile" ref="mobileHeaderRef" />
       <section class="hero">
         <h1>✨ 歡迎來到萌夢島 ✨</h1>
         <p>🎮 最棒的楓之谷體驗，等你來探索可愛的冒險世界！ 🌸</p>
@@ -89,9 +89,15 @@
   import { ref, computed, onMounted, watch } from 'vue'
   import { useNavigation } from '@/hooks/useNavigation'
   import { useResponsiveScale } from '@/composables/useResponsiveScale'
+  import { useHeaderHeight } from '@/composables/useHeaderHeight'
   import DesktopHeader from './components/desktop-header.vue'
   import MobileHeader from './components/mobile-header.vue'
+
   const { isDesktop, isMobile } = useResponsiveScale()
+
+  // 使用头部高度管理
+  const { desktopHeaderRef, mobileHeaderRef, currentHeaderHeight, measureHeaderHeight } =
+    useHeaderHeight()
 
   const imageList = ref({
     gameInfo: {
@@ -127,6 +133,7 @@
 
   .page-root {
     // min-height: 100vh;
+    // padding-top 将通过 JavaScript 动态设置
   }
 
   // 设备特定显示类

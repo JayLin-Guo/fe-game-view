@@ -61,7 +61,7 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-right: 60px;
+      margin-right: 30px;
 
       .sparkle {
         color: #ffffff;
