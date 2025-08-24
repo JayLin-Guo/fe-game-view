@@ -1,11 +1,13 @@
-.desktop-container {
+.mobile-container {
   width: 100vw;
-  max-width: 1920px;
+  max-width: 100%;
   padding-bottom: 20px;
+
   .content-container {
     margin: 0 auto;
-    max-width: 1000px;
-    padding-top: 80px;
+    max-width: 100%;
+    padding: 20px 15px;
+    padding-top: 100px;
   }
 
   .hero {
@@ -13,9 +15,9 @@
     margin-bottom: 20px;
     margin-top: 10px;
     background-color: #fefefe;
-    height: 155px;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(255, 182, 193, 0.2);
+    height: 120px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(255, 182, 193, 0.2);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -25,57 +27,57 @@
 
     &:before {
       content: '🌸';
-      font-size: 30px;
+      font-size: 24px;
       position: absolute;
-      top: 10px;
-      left: 30px;
+      top: 8px;
+      left: 20px;
       color: #f0c8d2;
     }
 
     &:after {
       content: '🌼';
-      font-size: 30px;
+      font-size: 24px;
       position: absolute;
-      bottom: 10px;
-      right: 30px;
+      bottom: 8px;
+      right: 20px;
       color: #f0dcb0;
     }
 
     h1 {
-      font-size: 40px;
+      font-size: 28px;
       font-weight: 700;
       background: linear-gradient(90deg, #ff69b4 0%, #87ceeb 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       position: relative;
 
       &:before {
         content: '✨';
         position: absolute;
-        left: -40px;
+        left: -30px;
         top: 50%;
         transform: translateY(-50%);
-        font-size: 24px;
+        font-size: 18px;
         color: #dcc8e6;
       }
 
       &:after {
         content: '✨✨✨';
         position: absolute;
-        right: -60px;
+        right: -45px;
         top: 50%;
         transform: translateY(-50%);
-        font-size: 20px;
+        font-size: 16px;
         color: #dcc8e6;
       }
     }
 
     p {
-      font-size: 18px;
-      line-height: 1.6;
-      max-width: 800px;
+      font-size: 14px;
+      line-height: 1.4;
+      max-width: 100%;
       margin: 0 auto;
       background: linear-gradient(90deg, #ff69b4 0%, #87ceeb 100%);
       -webkit-background-clip: text;
@@ -86,13 +88,13 @@
       &:before {
         content: '...';
         color: #bea0d2;
-        margin-right: 10px;
+        margin-right: 8px;
       }
 
       &:after {
         content: '...';
         color: #bea0d2;
-        margin-left: 10px;
+        margin-left: 8px;
       }
     }
   }
@@ -100,106 +102,109 @@
   .game-info-section {
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(15px);
-    border: 3px solid rgba(255, 182, 193, 0.3);
-    border-radius: 25px;
-    padding: 2rem;
-    box-shadow: 0 10px 40px rgba(255, 182, 193, 0.2);
-    margin-bottom: 3rem;
+    border: 2px solid rgba(255, 182, 193, 0.3);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 25px rgba(255, 182, 193, 0.2);
+    margin-bottom: 2rem;
 
     .game-info-image-container {
-      min-height: 200px;
+      min-height: 150px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #8b4b9c;
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
   }
 
   .game-view-section {
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(15px);
-    border: 3px solid rgba(255, 182, 193, 0.3);
-    border-radius: 25px;
-    padding: 2rem;
-    box-shadow: 0 10px 40px rgba(255, 182, 193, 0.2);
-    margin-bottom: 3rem;
+    border: 2px solid rgba(255, 182, 193, 0.3);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 25px rgba(255, 182, 193, 0.2);
+    margin-bottom: 2rem;
 
     .game-view-image-container {
-      min-height: 200px;
+      min-height: 150px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #8b4b9c;
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
   }
 
   .story-section {
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(15px);
-    border: 3px solid rgba(255, 182, 193, 0.3);
-    border-radius: 25px;
-    padding: 20px;
-    box-shadow: 0 10px 40px rgba(255, 182, 193, 0.2);
-    margin-bottom: 20px;
+    border: 2px solid rgba(255, 182, 193, 0.3);
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 8px 25px rgba(255, 182, 193, 0.2);
+    margin-bottom: 15px;
 
     .story-image-container {
-      min-height: 200px;
+      min-height: 150px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #8b4b9c;
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
   }
 
   .login-image-section {
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(15px);
-    border: 3px solid rgba(255, 182, 193, 0.3);
-    border-radius: 25px;
-    padding: 20px;
-    box-shadow: 0 10px 40px rgba(255, 182, 193, 0.2);
+    border: 2px solid rgba(255, 182, 193, 0.3);
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 8px 25px rgba(255, 182, 193, 0.2);
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 
     .login-image-container {
-      min-height: 200px;
+      min-height: 150px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #8b4b9c;
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
   }
 
   .features {
-    display: flex;
-    justify-content: space-around;
-    gap: 30px;
     margin-bottom: 20px;
 
     .feature-card {
-      width: 300px;
-      padding: 30px;
+      width: 100%;
+
+      padding: 20px;
       background: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(15px);
-      border: 3px solid rgba(255, 182, 193, 0.3);
-      border-radius: 20px;
-      box-shadow: 0 10px 40px rgba(255, 182, 193, 0.2);
+      border: 2px solid rgba(255, 182, 193, 0.3);
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(255, 182, 193, 0.2);
       overflow: hidden;
       transition: all 0.3s ease;
 
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 35px rgba(255, 182, 193, 0.3);
+      }
       .feature-header {
-        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
         font-weight: 700;
         box-sizing: border-box;
-        text-align: center;
         padding: 10px 0px;
 
         .feature-title {
-          font-size: 24px;
           font-weight: 700;
           background: linear-gradient(90deg, #ff69b4 0%, #87ceeb 100%);
           -webkit-background-clip: text;
@@ -208,7 +213,6 @@
           margin-left: 10px;
         }
         .feature-icon {
-          padding: 10px 0px;
           font-size: 20px;
         }
       }
@@ -224,127 +228,84 @@
   .section {
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(15px);
-    border: 3px solid rgba(255, 182, 193, 0.3);
-    border-radius: 25px;
-    padding: 20px 80px;
-    box-shadow: 0 10px 40px rgba(255, 182, 193, 0.2);
-    margin-bottom: 20px;
+    border: 2px solid rgba(255, 182, 193, 0.3);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(255, 182, 193, 0.2);
+    margin-bottom: 15px;
+
     h2 {
       text-align: center;
-      font-size: 40px;
+      font-size: 28px;
       font-weight: 700;
       background: linear-gradient(45deg, #ff69b4, #87ceeb);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
     .news-item {
       background: rgba(255, 182, 193, 0.15);
-      padding: 15px;
-      border-radius: 15px;
-      margin-bottom: 20px;
+      padding: 12px;
+      border-radius: 12px;
+      margin-bottom: 15px;
       color: #8b4b9c;
-      border-left: 5px solid #ffb6c1;
+      border-left: 4px solid #ffb6c1;
       transition: all 0.3s ease;
 
       &:hover {
         background: rgba(255, 182, 193, 0.25);
-        transform: translateX(5px);
+        transform: translateX(3px);
       }
 
       .date {
         font-weight: 600;
         color: #ff69b4;
         margin-bottom: 0.5rem;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
       }
 
       p {
         margin: 0;
-        line-height: 1.6;
-        font-size: 1rem;
+        line-height: 1.5;
+        font-size: 0.9rem;
       }
     }
   }
 
   // 下载专区样式
   .download-section {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 
     .download-buttons {
       display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      .common-button1 {
+        width: 200px;
+        height: 60px;
+        font-size: 18px;
+      }
     }
   }
 
   // 社群模块样式
   .community-section {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 
     .community-buttons {
       display: flex;
-      justify-content: center;
-      gap: 1.5rem;
       flex-wrap: wrap;
-
-      .community-btn {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 14px 20px;
-        background: linear-gradient(135deg, #fff8da 0%, #ffe7f0 100%);
-        border: 2px dashed #c0c0c0;
-        border-radius: 20px;
-        color: #7b7b9c;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(200, 200, 200, 0.3);
-        position: relative;
-        overflow: hidden;
-
-        &:before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: -100%;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-          transition: left 0.5s ease;
-        }
-
-        &:hover {
-          background: linear-gradient(135deg, #ffeaf8 0%, #fff8da 100%);
-          border: 2px solid #ffeaf8;
-          color: #6a5acd;
-          transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(255, 234, 248, 0.4);
-        }
-
-        &:hover:before {
-          left: 100%;
-        }
-
-        .btn-icon {
-          font-size: 18px;
-          filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-          transition: all 0.3s ease;
-        }
-
-        &:hover .btn-icon {
-          filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-        }
-
-        .btn-text {
-          white-space: nowrap;
-          transition: all 0.3s ease;
-        }
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      .common-button1 {
+        width: 40%;
+        height: 60px;
+        font-size: 12px;
+        padding: 10px 0px;
       }
     }
   }

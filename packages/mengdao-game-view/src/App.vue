@@ -10,16 +10,8 @@
   import { useRouter } from 'vue-router'
 
   const router = useRouter()
-  const activeMenu = ref('home')
 
-  const handleLogin = () => {
-    console.log('登录按钮点击')
-  }
-
-  const handleMenuSelect = (index: string) => {
-    activeMenu.value = index
-    router.push({ name: index })
-  }
+ 
 </script>
 
 <style scoped>

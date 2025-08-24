@@ -5,8 +5,8 @@ import 'element-plus/dist/index.css'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import router from './router'
 import App from './App.vue'
-import './assets/main.css'
 import './styles/main.scss'
+import { responsiveScale } from './utils/responsiveScale'
 
 const app = createApp(App)
 
@@ -18,5 +18,8 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 app.use(createPinia())
 app.use(router)
 app.use(ElementPlus)
+
+// 初始化响应式缩放系统
+responsiveScale
 
 app.mount('#app')

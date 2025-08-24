@@ -1,0 +1,73 @@
+// 响应式样式系统 - 基于设备类型自动切换样式
+// 使用CSS媒体查询实现，无需JavaScript干预
+
+// 导入设备特定样式
+@import './pc.scss';
+@import './mobile.scss';
+
+// 响应式容器控制
+// 默认显示PC样式（desktop-container）
+.desktop-container {
+  display: block;
+}
+
+.mobile-container {
+  display: none;
+}
+
+// 移动端样式（≤768px）
+@media (max-width: 768px) {
+  .desktop-container {
+    display: none;
+  }
+
+  .mobile-container {
+    display: block;
+  }
+}
+
+// 平板端样式（769px-1024px）
+@media (min-width: 769px) and (max-width: 1024px) {
+  .desktop-container {
+    display: block;
+  }
+
+  .mobile-container {
+    display: none;
+  }
+
+  // 平板端特定调整
+  .desktop-container .content-container {
+    padding: 30px 25px;
+  }
+}
+
+// 大屏幕样式（>1024px）
+@media (min-width: 1025px) {
+  .desktop-container {
+    display: block;
+  }
+
+  .mobile-container {
+    display: none;
+  }
+}
+
+// 设备特定显示类
+.mobile-only {
+  display: none;
+}
+
+.pc-only {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
+
+  .pc-only {
+    display: none;
+  }
+}
