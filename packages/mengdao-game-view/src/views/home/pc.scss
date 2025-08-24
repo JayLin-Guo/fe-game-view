@@ -217,6 +217,44 @@
     }
   }
 
+  .game-info-section {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
+    border: 3px solid rgba(255, 182, 193, 0.3);
+    border-radius: 25px;
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(255, 182, 193, 0.2);
+    margin-bottom: 3rem;
+
+    .game-info-image-container {
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #8b4b9c;
+      font-size: 1.2rem;
+    }
+  }
+
+  .game-view-section {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
+    border: 3px solid rgba(255, 182, 193, 0.3);
+    border-radius: 25px;
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(255, 182, 193, 0.2);
+    margin-bottom: 3rem;
+
+    .game-view-image-container {
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #8b4b9c;
+      font-size: 1.2rem;
+    }
+  }
+
   .story-section {
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(15px);
@@ -335,6 +373,86 @@
         margin: 0;
         line-height: 1.6;
         font-size: 1rem;
+      }
+    }
+  }
+
+  // 下载专区样式
+  .download-section {
+    margin-bottom: 3rem;
+
+    .download-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+  }
+
+  // 社群模块样式
+  .community-section {
+    margin-bottom: 3rem;
+
+    .community-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+
+      .community-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 20px;
+        background: linear-gradient(135deg, #fff8da 0%, #ffe7f0 100%);
+        border: 2px dashed #c0c0c0;
+        border-radius: 20px;
+        color: #7b7b9c;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(200, 200, 200, 0.3);
+        position: relative;
+        overflow: hidden;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+          transition: left 0.5s ease;
+        }
+
+        &:hover {
+          background: linear-gradient(135deg, #ffeaf8 0%, #fff8da 100%);
+          border: 2px solid #ffeaf8;
+          color: #6a5acd;
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(255, 234, 248, 0.4);
+        }
+
+        &:hover:before {
+          left: 100%;
+        }
+
+        .btn-icon {
+          font-size: 18px;
+          filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+          transition: all 0.3s ease;
+        }
+
+        &:hover .btn-icon {
+          filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+        }
+
+        .btn-text {
+          white-space: nowrap;
+          transition: all 0.3s ease;
+        }
       }
     }
   }

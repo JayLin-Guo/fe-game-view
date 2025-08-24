@@ -9,10 +9,12 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -21,7 +23,7 @@ html, body {
 a {
   color: $primary-color;
   text-decoration: none;
-  
+
   &:hover {
     text-decoration: underline;
   }
@@ -39,7 +41,9 @@ button {
 }
 
 // 全局输入框样式
-input, textarea, select {
+input,
+textarea,
+select {
   font-family: inherit;
   font-size: inherit;
 }
@@ -57,7 +61,7 @@ input, textarea, select {
 ::-webkit-scrollbar-thumb {
   background: #c1c1c1;
   border-radius: 4px;
-  
+
   &:hover {
     background: #a8a8a8;
   }
@@ -105,33 +109,81 @@ input, textarea, select {
 }
 
 // 全局工具类
-.text-center { text-align: center; }
-.text-left { text-align: left; }
-.text-right { text-align: right; }
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
 
-.flex { display: flex; }
-.flex-col { flex-direction: column; }
-.flex-row { flex-direction: row; }
-.items-center { align-items: center; }
-.justify-center { justify-content: center; }
-.justify-between { justify-content: space-between; }
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
 
-.w-full { width: 100%; }
-.h-full { height: 100%; }
-.min-h-screen { min-height: 100vh; }
+.w-full {
+  width: 100%;
+}
+.h-full {
+  height: 100%;
+}
+.min-h-screen {
+  min-height: 100vh;
+}
 
-.relative { position: relative; }
-.absolute { position: absolute; }
-.fixed { position: fixed; }
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
 
-.rounded { border-radius: 4px; }
-.rounded-lg { border-radius: 8px; }
-.rounded-xl { border-radius: 12px; }
+.rounded {
+  border-radius: 4px;
+}
+.rounded-lg {
+  border-radius: 8px;
+}
+.rounded-xl {
+  border-radius: 12px;
+}
 
-.shadow { box-shadow: $shadow-sm; }
-.shadow-md { box-shadow: $shadow-md; }
-.shadow-lg { box-shadow: $shadow-lg; }
+.shadow {
+  box-shadow: $shadow-sm;
+}
+.shadow-md {
+  box-shadow: $shadow-md;
+}
+.shadow-lg {
+  box-shadow: $shadow-lg;
+}
 
-.transition { transition: $transition-normal; }
-.transition-fast { transition: $transition-fast; }
-.transition-slow { transition: $transition-slow; }
+.transition {
+  transition: $transition-normal;
+}
+.transition-fast {
+  transition: $transition-fast;
+}
+.transition-slow {
+  transition: $transition-slow;
+}
