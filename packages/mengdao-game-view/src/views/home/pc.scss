@@ -82,17 +82,80 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-      &:before {
-        content: '...';
-        color: #bea0d2;
-        margin-right: 10px;
+      .dots-left {
+        position: relative;
+        margin-right: 15px;
+        width: 30px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        
+        // 第一个点（左边，最低）
+        &::before {
+          content: '';
+          position: absolute;
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background: #ff69b4;
+          opacity: 0.8;
+          left: 0;
+          top: 8px;
+        }
+        
+        // 第二个和第三个点（从小到大，向上趋势）
+        &::after {
+          content: '';
+          position: absolute;
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background: #ff69b4;
+          opacity: 0.8;
+          left: 8px;
+          top: 6px;
+          box-shadow: 8px -2px 0 0 #ff69b4; // 第三个点（右边，最高）
+        }
       }
 
-      &:after {
-        content: '...';
-        color: #bea0d2;
-        margin-left: 10px;
+      .dots-right {
+        position: relative;
+        margin-left: 15px;
+        width: 30px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        
+        // 第一个点（左边，最高）
+        &::before {
+          content: '';
+          position: absolute;
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background: #87ceeb;
+          opacity: 0.8;
+          left: 0;
+          top: 4px;
+        }
+        
+        // 第二个和第三个点（从大到小，向下趋势）
+        &::after {
+          content: '';
+          position: absolute;
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background: #87ceeb;
+          opacity: 0.8;
+          left: 8px;
+          top: 6px;
+          box-shadow: 8px 2px 0 0 #87ceeb; // 第三个点（右边，最低）
+        }
       }
     }
   }

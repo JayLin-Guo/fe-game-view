@@ -6,7 +6,11 @@
       <MobileHeader v-if="isMobile" ref="mobileHeaderRef" />
       <section class="hero">
         <h1>✨ 歡迎來到萌夢島 ✨</h1>
-        <p>🎮 最棒的楓之谷體驗，等你來探索可愛的冒險世界！ 🌸</p>
+        <p>
+          <span class="dots-left"></span>
+          🎮 最棒的楓之谷體驗，等你來探索可愛的冒險世界！ 🌸
+          <span class="dots-right"></span>
+        </p>
       </section>
       <section class="story-section">
         <div class="story-image-container">
