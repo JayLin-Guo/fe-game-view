@@ -299,7 +299,7 @@
       box-shadow: 0 8px 25px rgba(255, 182, 193, 0.2);
       overflow: hidden;
       transition: all 0.3s ease;
-
+      margin-bottom: 10px;
       &:hover {
         transform: translateY(-3px);
         box-shadow: 0 12px 35px rgba(255, 182, 193, 0.3);
@@ -323,6 +323,10 @@
         }
         .feature-icon {
           font-size: 20px;
+          height: 20px;
+          img {
+            height: 100%;
+          }
         }
       }
       .feature-text {
@@ -342,16 +346,23 @@
     padding: 20px;
     box-shadow: 0 8px 25px rgba(255, 182, 193, 0.2);
     margin-bottom: 15px;
+    padding-bottom: 30px;
 
+    padding-top: 0px;
     h2 {
       text-align: center;
       font-size: 28px;
       font-weight: 700;
-      background: linear-gradient(45deg, #ff69b4, #87ceeb);
+      background: linear-gradient(135deg, #f1aedf 0%, #d682bf 52%, #a0a8e9 100%);
+
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 15px;
+      margin-bottom: 25px;
+      .title-icon {
+        height: 26px;
+        margin: 0px 10px;
+      }
     }
 
     .news-item {
@@ -393,9 +404,18 @@
       gap: 15px;
       align-items: center;
       .common-button1 {
-        width: 200px;
+        width: 70%;
         height: 60px;
+        text-align: center;
         font-size: 18px;
+        display: flex;
+        justify-content: center;
+      }
+      .btn-icon {
+        height: 18px;
+        img {
+          height: 100%;
+        }
       }
     }
   }
@@ -415,6 +435,15 @@
         height: 60px;
         font-size: 12px;
         padding: 10px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .btn-icon {
+        height: 18px;
+        img {
+          height: 100%;
+        }
       }
     }
   }

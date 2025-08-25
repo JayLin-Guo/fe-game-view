@@ -40,7 +40,9 @@
       <section class="features">
         <div v-for="item in imageList.features" :key="item.url" class="feature-card">
           <div class="feature-header">
-            <div class="feature-icon">{{ item.icon }}2</div>
+            <div class="feature-icon">
+              <img :src="item.url" />
+            </div>
             <div class="feature-title">{{ item.title }}</div>
           </div>
           <div class="feature-text">{{ item.text }}</div>
@@ -48,60 +50,84 @@
       </section>
 
       <section class="section" id="news">
-        <h2>🌟 最新消息 🌟</h2>
+        <h2>
+          <img class="title-icon" :src="imageList.hIcon.url" />
+          <span> 最新消息</span>
+          <img class="title-icon" :src="imageList.hIcon.url" />
+        </h2>
         <div class="news-item">
           <div class="date">2025-07-01</div>
-          <p>🎉 暑期活勤始!完成任移即可得超级厚励!</p>
+          <p>暑期活勤始!暑期活動開始！完成任務即可獲得超級 豐厚獎勵！!</p>
         </div>
         <div class="news-item">
           <div class="date">2025-07-01</div>
-          <p>🔧 伺服器侵化完成，游截霞更加流畅定，如煞般顺滑 (大陵直速)免加速器</p>
+          <p>伺服器優化完成，遊戲體驗更加流暢穩定，如絲般順滑（大陸直連）免加速器~</p>
         </div>
         <div class="news-item">
           <div class="date">2025-07-01</div>
-          <p>💎 萌萝谷正式服!歉迎所有勇者加入我们的粉彩冒险旅程!</p>
+          <p>萌萝谷正式服!歉迎所有勇者加入我们的粉彩冒险旅程!</p>
         </div>
       </section>
 
       <section class="section download-section" id="download">
-        <h2>💖 下載專區 💖</h2>
+        <h2>
+          <img class="title-icon" :src="imageList.hIcon.url" />
+          <span>下載專區</span>
+          <img class="title-icon" :src="imageList.hIcon.url" />
+        </h2>
         <div class="download-buttons">
           <button class="common-button1">
-            <span class="btn-icon">🎮</span>
+            <span class="btn-icon">
+              <img :src="imageList.games.icon1" />
+            </span>
             <span class="btn-text">遊戲主程序下載</span>
           </button>
           <button class="common-button1">
-            <span class="btn-icon">🔑</span>
+            <span class="btn-icon">
+              <img :src="imageList.games.icon2" />
+            </span>
             <span class="btn-text">登入器下載</span>
           </button>
         </div>
       </section>
 
       <section class="section community-section" id="community">
-        <h2>💖 加入我們的社群 💖</h2>
+        <h2>
+          <img class="title-icon" :src="imageList.hIcon.url" />
+          <span>加入我們的社群</span>
+          <img class="title-icon" :src="imageList.hIcon.url" />
+        </h2>
         <div class="community-buttons">
           <button class="common-button1">
-            <span class="btn-icon">💬</span>
-            <span class="btn-text">加入Discord</span>
-          </button>
-          <button class="common-button1">
-            <span class="btn-icon">💬</span>
-            <span class="btn-icon">💬</span>
+            <span class="btn-icon">
+              <img :src="imageList.community.icon1" />
+            </span>
             <span class="btn-text">QQ聊天區</span>
           </button>
           <button class="common-button1">
-            <span class="btn-icon">💬</span>
+            <span class="btn-icon">
+              <img :src="imageList.community.icon1" />
+            </span>
+            <span class="btn-text">加入Discord</span>
+          </button>
+
+          <button class="common-button1">
+            <span class="btn-icon">
+              <img :src="imageList.community.icon1" />
+            </span>
             <span class="btn-text">加入KOOK</span>
           </button>
           <button class="common-button1">
-            <span class="btn-icon">💖</span>
+            <span class="btn-icon">
+              <img :src="imageList.community.icon2" />
+            </span>
             <span class="btn-text">贊助支持</span>
           </button>
         </div>
       </section>
 
       <!-- 测试特效按钮 -->
-      <section class="section test-section">
+      <!-- <section class="section test-section">
         <h2>🌟 特效测试 🌟</h2>
         <div class="test-buttons">
           <button class="common-button1" @click="testCursorTrail">
@@ -113,7 +139,7 @@
             <span class="btn-text">进入测试页面</span>
           </router-link>
         </div>
-      </section>
+      </section> -->
     </div>
   </div>
 </template>
@@ -125,49 +151,13 @@
   import DesktopHeader from './components/desktop-header.vue'
   import MobileHeader from './components/mobile-header.vue'
   import SimpleCursorTrail from '@/components/cursor-trail/SimpleCursorTrail.vue'
+  import { imageList } from './imageUrl'
 
   const { isDesktop, isMobile } = useResponsiveScale()
 
   // 使用头部高度管理
   const { desktopHeaderRef, mobileHeaderRef, currentHeaderHeight, measureHeaderHeight } =
     useHeaderHeight()
-
-  const imageList = ref({
-    hero: {
-      titleLeft: {
-        url: new URL('@/assets/start1.png', import.meta.url).href,
-      },
-      titleRight: {
-        url: new URL('@/assets/contet-icon.png', import.meta.url).href,
-      },
-    },
-    gameInfo: {
-      url: new URL('@/assets/pc-image/game-info.png', import.meta.url).href,
-    },
-    gameView: {
-      url: new URL('@/assets/pc-image/game-view.png', import.meta.url).href,
-    },
-    features: [
-      {
-        icon: '',
-        title: '經典玩法',
-        text: '重現經典楓之谷體驗，帶你回到最初的感動時光，與可愛的夥伴們一起冒險',
-        url: new URL('@/assets/pc-image/feature-1.png', import.meta.url).href,
-      },
-      {
-        icon: '',
-        title: '穩定伺服器',
-        text: '24小時穩定運行，極低延遲， 給你最流暢的遊戲體驗，像棉花糖般柔順',
-        url: new URL('@/assets/pc-image/feature-2.png', import.meta.url).href,
-      },
-      {
-        icon: '',
-        title: '活躍社群',
-        text: '熱情的玩家社群，一起冒險、交流、成長，建立最溫暖的友誼',
-        url: new URL('@/assets/pc-image/feature-3.png', import.meta.url).href,
-      },
-    ],
-  })
 
   // 测试鼠标跟随特效
   const testCursorTrail = () => {
