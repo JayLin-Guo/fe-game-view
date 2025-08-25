@@ -88,20 +88,6 @@ export default defineConfig(({ mode }) => {
       preprocessorOptions: {
         scss: {
           additionalData: `@use "@/styles/variables.scss" as *;`, // 全局 SCSS 变量
-          // 添加路径解析
-          importer: [
-            {
-              findFileUrl(url: string) {
-                if (url.startsWith('@/')) {
-                  return new URL(
-                    url.replace('@/', resolve(__dirname, 'src') + '/'),
-                    import.meta.url
-                  )
-                }
-                return null
-              },
-            },
-          ],
         },
       },
     },

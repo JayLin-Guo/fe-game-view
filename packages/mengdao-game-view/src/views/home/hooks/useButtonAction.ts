@@ -11,8 +11,8 @@ export enum ButtonType {
 }
 
 export const useButtonAction = (linkConf: Ref<any>) => {
-  const onButtonAction = (type: ButtonType) => {
-    if (!linkConf.value[type]) {
+  const onButtonAction = (type: ButtonType | string) => {
+    if (!type || !linkConf.value[type]) {
       ElMessage.warning('功能正在开发中，敬请稍候')
       return
     }

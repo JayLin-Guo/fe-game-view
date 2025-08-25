@@ -1,123 +1,122 @@
 {
-    "cSpell.words": ["pagin"],
-    "update.mode": "manual",
-    "update.checkForUpdates": false,
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "prettier.singleQuote": true,
-    "prettier.semi": true,
-    "prettier.trailingComma": "none",
-    "prettier.printWidth": 120,
-    "prettier.tabWidth": 2,
-    "prettier.endOfLine": "auto",
-    "prettier.bracketSpacing": true,
-    "prettier.arrowParens": "avoid",
-    "prettier.proseWrap": "preserve",
-    "prettier.htmlWhitespaceSensitivity": "strict",
-    "prettier.vueIndentScriptAndStyle": false,
-    "prettier.singleAttributePerLine": false,
-    "prettier.bracketSameLine": true,
-    "prettier.jsxBracketSameLine": true,
-    "prettier.jsxSingleQuote": true,
-    "prettier.embeddedLanguageFormatting": "auto",
-    "prettier.quoteProps": "as-needed",
-    "editor.detectIndentation": false,
-    "editor.tabSize": 2,
-    "javascript.format.insertSpaceBeforeFunctionParentheses": true,
-    "typescript.format.insertSpaceBeforeFunctionParentheses": true,
-    "javascript.format.insertSpaceAfterConstructor": true,
-    "typescript.format.insertSpaceAfterConstructor": true,
-    "[vue]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[javascript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[json]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[html]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[css]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[scss]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[less]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": "explicit",
-      "source.fixAll": "explicit"
-    },
-    "files.eol": "\n",
-    "javascript.format.semicolons": "insert",
-    "typescript.format.semicolons": "insert",
-    "prettier.jsxSingleQuote": true,
-    "javascript.preferences.quoteStyle": "single",
-    "typescript.preferences.quoteStyle": "single",
-    "editor.wordWrap": "on",
-    "editor.renderWhitespace": "boundary",
-    "editor.guides.bracketPairs": true,
-    "editor.bracketPairColorization.enabled": true,
-    "editor.suggestSelection": "first",
-    "editor.acceptSuggestionOnCommitCharacter": true,
-    "editor.quickSuggestions": {
-      "strings": true
-    },
-    "files.trimTrailingWhitespace": true,
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "files.exclude": {
-      "**/.git": true,
-      "**/.svn": true,
-      "**/.hg": true,
-      "**/CVS": true,
-      "**/.DS_Store": true
-      // "**/node_modules": true,
-      // "**/dist": true
-    },
-    "files.associations": {
-      "*.vue": "vue",
-      "*.wpy": "vue",
-      "*.json": "jsonc"
-    },
-    "search.exclude": {
-      // "**/node_modules": true,
-      "**/dist": true,
-      "**/.git": true
-    },
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "javascript.suggest.autoImports": true,
-    "typescript.suggest.autoImports": true,
-    "vetur.validation.template": false,
-    "vetur.format.enable": false,
-    "vue.codeActions.enabled": false,
-    "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "json", "jsonc"],
-    "eslint.probe": ["javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "json", "jsonc"],
-    "terminal.integrated.defaultProfile.windows": "PowerShell",
-    "terminal.integrated.cursorBlinking": true,
-    "terminal.integrated.copyOnSelection": true,
-    "workbench.editor.enablePreview": false,
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorCustomizations": {
-      "editorBracketHighlight.foreground1": "#FFB86C",
-      "editorBracketHighlight.foreground2": "#FF79C6",
-      "editorBracketHighlight.foreground3": "#BD93F9",
-      "editorBracketHighlight.foreground4": "#50FA7B",
-      "editorBracketHighlight.foreground5": "#F1FA8C",
-      "editorBracketHighlight.foreground6": "#8BE9FD"
-    },
-    "debug.toolBarLocation": "docked",
-    "prettier.requireConfig": false,
-    "prettier.useEditorConfig": false,
-    "prettier.enable": true,
-    "kiroAgent.configureMCP": "Disabled"
-  }
-  
+  "cSpell.words": ["pagin"],
+  "update.mode": "manual",
+  "update.checkForUpdates": false,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.singleQuote": true,
+  "prettier.semi": true,
+  "prettier.trailingComma": "none",
+  "prettier.printWidth": 120,
+  "prettier.tabWidth": 2,
+  "prettier.endOfLine": "auto",
+  "prettier.bracketSpacing": true,
+  "prettier.arrowParens": "avoid",
+  "prettier.proseWrap": "preserve",
+  "prettier.htmlWhitespaceSensitivity": "strict",
+  "prettier.vueIndentScriptAndStyle": false,
+  "prettier.singleAttributePerLine": false,
+  "prettier.bracketSameLine": true,
+  "prettier.jsxBracketSameLine": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.embeddedLanguageFormatting": "auto",
+  "prettier.quoteProps": "as-needed",
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "javascript.format.insertSpaceBeforeFunctionParentheses": true,
+  "typescript.format.insertSpaceBeforeFunctionParentheses": true,
+  "javascript.format.insertSpaceAfterConstructor": true,
+  "typescript.format.insertSpaceAfterConstructor": true,
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll": "explicit"
+  },
+  "files.eol": "\n",
+  "javascript.format.semicolons": "insert",
+  "typescript.format.semicolons": "insert",
+  "prettier.jsxSingleQuote": true,
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "editor.wordWrap": "on",
+  "editor.renderWhitespace": "boundary",
+  "editor.guides.bracketPairs": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.suggestSelection": "first",
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true
+    // "**/node_modules": true,
+    // "**/dist": true
+  },
+  "files.associations": {
+    "*.vue": "vue",
+    "*.wpy": "vue",
+    "*.json": "jsonc"
+  },
+  "search.exclude": {
+    // "**/node_modules": true,
+    "**/dist": true,
+    "**/.git": true
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.suggest.autoImports": true,
+  "typescript.suggest.autoImports": true,
+  "vetur.validation.template": false,
+  "vetur.format.enable": true,
+  "vue.codeActions.enabled": false,
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "json", "jsonc"],
+  "eslint.probe": ["javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "json", "jsonc"],
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.copyOnSelection": true,
+  "workbench.editor.enablePreview": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorCustomizations": {
+    "editorBracketHighlight.foreground1": "#FFB86C",
+    "editorBracketHighlight.foreground2": "#FF79C6",
+    "editorBracketHighlight.foreground3": "#BD93F9",
+    "editorBracketHighlight.foreground4": "#50FA7B",
+    "editorBracketHighlight.foreground5": "#F1FA8C",
+    "editorBracketHighlight.foreground6": "#8BE9FD"
+  },
+  "debug.toolBarLocation": "docked",
+  "prettier.requireConfig": false,
+  "prettier.useEditorConfig": false,
+  "prettier.enable": true,
+  "kiroAgent.configureMCP": "Disabled"
+}
