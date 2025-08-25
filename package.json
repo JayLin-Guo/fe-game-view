@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "pnpm --filter mengdao-game-view dev",
     "build:md:pro": "pnpm --filter mengdao-game-view build:analyze",
-    "preview": "pnpm --filter mengdao-game-view preview",
+    "preview:md": "pnpm --filter mengdao-game-view preview:dist",
     "lint": "pnpm --filter mengdao-game-view lint",
     "type-check": "pnpm --filter mengdao-game-view type-check"
   },
