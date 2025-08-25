@@ -1,7 +1,12 @@
 <template>
   <header>
     <div class="header-container">
-      <div class="logo">萌夢島 <span class="sparkle">✨</span></div>
+      <div class="logo">
+        萌夢島
+        <span class="sparkle">
+          <img :src="imageList.logoIcon.url" />
+        </span>
+      </div>
       <div class="nav-container">
         <a
           v-for="item in navItems"
@@ -10,7 +15,10 @@
           :class="['nav-button', item.id, { active: item.isActive }]"
           @click.prevent="setActiveNav(item.id)"
         >
-          <span class="icon"></span>
+          <!-- <span class="icon"></span> -->
+          <span>
+            <img :src="item.url" />
+          </span>
           <span>{{ item.label }}</span>
         </a>
       </div>

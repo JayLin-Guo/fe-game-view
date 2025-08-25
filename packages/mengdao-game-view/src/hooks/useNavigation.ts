@@ -5,6 +5,7 @@ export interface NavItem {
   label: string
   href: string
   icon?: string
+  url?: any
   isActive?: boolean
 }
 
@@ -15,47 +16,56 @@ export function useNavigation() {
       label: '消息',
       href: '#',
       icon: '',
+      url: new URL('@/assets/message.png', import.meta.url).href,
       isActive: true,
     },
     {
       id: 'tutorial',
       label: '新手教學',
+      url: new URL('@/assets/jiaoxue.png', import.meta.url).href,
       href: '#',
       icon: '',
     },
     {
       id: 'tutorial-cn',
       label: '新手教學(大陸)',
+      url: new URL('@/assets/jiaoxue.png', import.meta.url).href,
+
       href: '#',
       icon: '',
     },
     {
       id: 'download',
       label: '下載',
+      url: new URL('@/assets/download.png', import.meta.url).href,
       href: '#',
       icon: '',
     },
     {
       id: 'qq',
       label: 'QQ聊天區',
+      url: new URL('@/assets/download.png', import.meta.url).href,
       href: '#',
       icon: '',
     },
     {
       id: 'discord',
       label: 'Discord',
+      url: new URL('@/assets/discord.png', import.meta.url).href,
       href: '#',
       icon: '',
     },
     {
       id: 'login',
       label: '登入',
+      url: new URL('@/assets/login.png', import.meta.url).href,
       href: '#',
       icon: '',
     },
     {
       id: 'register',
       label: '註冊',
+      url: new URL('@/assets/register.png', import.meta.url).href,
       href: '#',
       icon: '',
     },

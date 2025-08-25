@@ -1,7 +1,9 @@
 .desktop-container {
   width: 100vw;
   max-width: 1920px;
+  margin: 0 auto;
   padding-bottom: 20px;
+
   .content-container {
     margin: 0 auto;
     max-width: 1000px;
@@ -93,7 +95,7 @@
         height: 16px;
         display: flex;
         align-items: center;
-        
+
         // 第一个点（左边，最低）
         &::before {
           content: '';
@@ -106,7 +108,7 @@
           left: 0;
           top: 8px;
         }
-        
+
         // 第二个和第三个点（从小到大，向上趋势）
         &::after {
           content: '';
@@ -129,7 +131,7 @@
         height: 16px;
         display: flex;
         align-items: center;
-        
+
         // 第一个点（左边，最高）
         &::before {
           content: '';
@@ -142,7 +144,7 @@
           left: 0;
           top: 4px;
         }
-        
+
         // 第二个和第三个点（从大到小，向下趋势）
         &::after {
           content: '';
@@ -270,11 +272,13 @@
           background-clip: text;
           margin-left: 10px;
         }
+
         .feature-icon {
           padding: 10px 0px;
           font-size: 20px;
         }
       }
+
       .feature-text {
         text-align: center;
         color: #895f95;
@@ -292,6 +296,7 @@
     padding: 20px 80px;
     box-shadow: 0 10px 40px rgba(255, 182, 193, 0.2);
     margin-bottom: 20px;
+
     h2 {
       text-align: center;
       font-size: 40px;
