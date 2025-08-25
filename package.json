@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "pnpm --filter mengdao-game-view dev",
-    "build": "pnpm --filter mengdao-game-view build",
+    "build:md:pro": "pnpm --filter mengdao-game-view build:analyze",
     "preview": "pnpm --filter mengdao-game-view preview",
     "lint": "pnpm --filter mengdao-game-view lint",
     "type-check": "pnpm --filter mengdao-game-view type-check"
@@ -18,4 +18,4 @@
     "node": ">=18.0.0",
     "pnpm": ">=8.0.0"
   }
-} 
+}
