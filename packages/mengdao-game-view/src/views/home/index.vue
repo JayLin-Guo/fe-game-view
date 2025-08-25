@@ -164,7 +164,7 @@
     useHeaderHeight()
 </script>
 <style lang="scss" scoped>
-  @import './responsive-styles.scss';
+  @use './responsive-styles.scss';
 
   .page-root {
     // min-height: 100vh;

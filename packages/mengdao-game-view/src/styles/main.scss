@@ -1,6 +1,6 @@
 // 主样式入口文件
-@import './variables.scss';
-@import './scrollbar-simple.scss';
+@use './variables.scss';
+@use './scrollbar-simple.scss';
 // @import './common.scss';
 
 // 全局重置样式
@@ -159,26 +159,6 @@ select {
 }
 .rounded-xl {
   border-radius: 12px;
-}
-
-.shadow {
-  box-shadow: $shadow-sm;
-}
-.shadow-md {
-  box-shadow: $shadow-md;
-}
-.shadow-lg {
-  box-shadow: $shadow-lg;
-}
-
-.transition {
-  transition: $transition-normal;
-}
-.transition-fast {
-  transition: $transition-fast;
-}
-.transition-slow {
-  transition: $transition-slow;
 }
 
 // 鼠标跟随特效样式

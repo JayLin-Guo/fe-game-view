@@ -2,8 +2,8 @@
 // 使用CSS媒体查询实现，无需JavaScript干预
 
 // 导入设备特定样式
-@import './pc.scss';
-@import './mobile.scss';
+@use './pc.scss';
+@use './mobile.scss';
 
 // 响应式容器控制
 // 默认显示PC样式（desktop-container）
