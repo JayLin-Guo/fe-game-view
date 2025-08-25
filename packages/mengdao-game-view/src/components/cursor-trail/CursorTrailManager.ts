@@ -13,7 +13,7 @@ export interface TrailConfig {
   enabled: boolean // 是否启用
 
   // 视觉配置
-  theme: StarTheme // 主题
+  theme: any // 主题
   sizeRange: [number, number] // 大小范围
 
   // 性能配置
@@ -156,7 +156,7 @@ export class CursorTrailManager {
   private isLowPerformanceDevice(): boolean {
     // 简单的性能检测
     const canvas = document.createElement('canvas')
-    const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl')
+    const gl: any = canvas.getContext('webgl') || canvas.getContext('experimental-webgl')
 
     if (!gl) return true
 

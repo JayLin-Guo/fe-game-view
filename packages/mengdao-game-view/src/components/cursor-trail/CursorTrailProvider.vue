@@ -2,7 +2,7 @@
   <div class="cursor-trail-provider">
     <!-- 插槽内容 -->
     <slot />
-    
+
     <!-- 调试信息（仅开发环境） -->
     <div v-if="showDebugInfo && isDev" class="cursor-trail-debug">
       <div class="debug-panel">
@@ -45,13 +45,13 @@
   interface Props {
     // 基础配置
     enabled?: boolean
-    theme?: StarTheme
+    theme?: any
     maxParticles?: number
     enableMobile?: boolean
-    
+
     // 调试配置
     showDebugInfo?: boolean
-    
+
     // 高级配置
     spawnRate?: number
     sizeRange?: [number, number]
@@ -83,14 +83,7 @@
   })
 
   // 解构响应式数据
-  const {
-    isEnabled,
-    particleCount,
-    config,
-    toggle,
-    setTheme,
-    updateConfig,
-  } = cursorTrail
+  const { isEnabled, particleCount, config, toggle, setTheme, updateConfig } = cursorTrail
 
   // 主题切换逻辑
   const themeList = Object.keys(starThemes) as StarTheme[]
@@ -150,7 +143,7 @@
   .debug-panel h4 {
     margin: 0 0 8px 0;
     font-size: 14px;
-    color: #FFD700;
+    color: #ffd700;
   }
 
   .debug-item {
@@ -170,7 +163,7 @@
   }
 
   .active {
-    color: #4CAF50 !important;
+    color: #4caf50 !important;
   }
 
   .inactive {

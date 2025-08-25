@@ -46,7 +46,7 @@ export class StarParticle {
   private rotationSpeed: number
 
   // DOM元素
-  public element: HTMLElement
+  public element: any
 
   constructor(config: ParticleConfig) {
     this.x = config.x
