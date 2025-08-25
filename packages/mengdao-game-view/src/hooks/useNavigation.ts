@@ -14,7 +14,7 @@ export function useNavigation() {
     {
       id: 'message',
       label: '消息',
-      href: '#',
+      href: '',
       icon: '',
       url: new URL('@/assets/message.png', import.meta.url).href,
       isActive: true,
@@ -52,7 +52,7 @@ export function useNavigation() {
       id: 'discord',
       label: 'Discord',
       url: new URL('@/assets/discord.png', import.meta.url).href,
-      href: '#',
+      href: 'discord_url',
       icon: '',
     },
     {

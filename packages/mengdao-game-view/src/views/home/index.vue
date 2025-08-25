@@ -76,13 +76,13 @@
           <img class="title-icon" :src="imageList.hIcon.url" />
         </h2>
         <div class="download-buttons">
-          <button class="common-button1">
+          <button class="common-button1" @click="onButtonAction(ButtonType.game_download_url)">
             <span class="btn-icon">
               <img :src="imageList.games.icon1" />
             </span>
             <span class="btn-text">遊戲主程序下載</span>
           </button>
-          <button class="common-button1">
+          <button class="common-button1" @click="onButtonAction(ButtonType.login_download_url)">
             <span class="btn-icon">
               <img :src="imageList.games.icon2" />
             </span>
@@ -98,13 +98,13 @@
           <img class="title-icon" :src="imageList.hIcon.url" />
         </h2>
         <div class="community-buttons">
-          <button class="common-button1">
+          <button class="common-button1" @click="onButtonAction(ButtonType.qq_group_url)">
             <span class="btn-icon">
               <img :src="imageList.community.icon1" />
             </span>
             <span class="btn-text">QQ聊天區</span>
           </button>
-          <button class="common-button1">
+          <button class="common-button1" @click="onButtonAction(ButtonType.discord_url)">
             <span class="btn-icon">
               <img :src="imageList.community.icon1" />
             </span>
@@ -115,31 +115,16 @@
             <span class="btn-icon">
               <img :src="imageList.community.icon1" />
             </span>
-            <span class="btn-text">加入KOOK</span>
+            <span class="btn-text" @click="onButtonAction(ButtonType.kook_url)">加入KOOK</span>
           </button>
           <button class="common-button1">
             <span class="btn-icon">
               <img :src="imageList.community.icon2" />
             </span>
-            <span class="btn-text">贊助支持</span>
+            <span class="btn-text" @click="onButtonAction('')">贊助支持</span>
           </button>
         </div>
       </section>
-
-      <!-- 测试特效按钮 -->
-      <!-- <section class="section test-section">
-        <h2>🌟 特效测试 🌟</h2>
-        <div class="test-buttons">
-          <button class="common-button1" @click="testCursorTrail">
-            <span class="btn-icon">💖</span>
-            <span class="btn-text">测试爱心跟随特效</span>
-          </button>
-          <router-link to="/cursor-test" class="common-button1" style="text-decoration: none">
-            <span class="btn-icon">🧪</span>
-            <span class="btn-text">进入测试页面</span>
-          </router-link>
-        </div>
-      </section> -->
     </div>
   </div>
 </template>
@@ -152,9 +137,14 @@
   import MobileHeader from './components/mobile-header.vue'
   import SimpleCursorTrail from '@/components/cursor-trail/SimpleCursorTrail.vue'
   import { imageList } from './imageUrl'
+  import { useInitLoad } from './hooks/useInit'
+  import { useButtonAction, ButtonType } from './hooks/useButtonAction'
 
   const { isDesktop, isMobile } = useResponsiveScale()
+  const { initLoad, sysLinkConf } = useInitLoad()
+  const { onButtonAction } = useButtonAction(sysLinkConf)
 
+  initLoad()
   // 使用头部高度管理
   const { desktopHeaderRef, mobileHeaderRef, currentHeaderHeight, measureHeaderHeight } =
     useHeaderHeight()

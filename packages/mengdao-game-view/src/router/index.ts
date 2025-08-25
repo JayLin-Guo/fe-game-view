@@ -10,14 +10,6 @@ const routes: RouteRecordRaw[] = [
       title: '萌夢島 - 首頁',
     },
   },
-  {
-    path: '/cursor-test',
-    name: 'cursor-test',
-    component: () => import('@/views/cursor-test.vue'),
-    meta: {
-      title: '鼠标跟随特效测试',
-    },
-  },
 ]
 
 const router = createRouter({
