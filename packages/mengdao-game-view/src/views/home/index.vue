@@ -1,5 +1,12 @@
 <template>
   <div class="page-root" :class="{ 'desktop-container': isDesktop, 'mobile-container': isMobile }">
+    <!-- Loading 组件 -->
+    <LetterLoading
+      :visible="initLoader.loading.value"
+      text="萌夢島"
+      subtitle="正在加载游戏数据..."
+    />
+
     <SimpleCursorTrail />
     <div class="content-container">
       <DesktopHeader v-if="isDesktop" ref="desktopHeaderRef" />
@@ -136,26 +143,22 @@
   import DesktopHeader from './components/desktop-header.vue'
   import MobileHeader from './components/mobile-header.vue'
   import SimpleCursorTrail from '@/components/cursor-trail/SimpleCursorTrail.vue'
+  import LetterLoading from '@/components/loading/LetterLoading.vue'
   import { imageList } from './imageUrl'
   import { useInitLoad } from './hooks/useInit'
   import { useButtonAction, ButtonType } from './hooks/useButtonAction'
 
   const { isDesktop, isMobile } = useResponsiveScale()
-  const { initLoad, sysLinkConf } = useInitLoad()
-  const { onButtonAction } = useButtonAction(sysLinkConf)
+  const initLoader = useInitLoad()
+  const { onButtonAction } = useButtonAction(initLoader.sysLinkConf)
 
-  initLoad()
+  // 页面加载时初始化数据
+  onMounted(async () => {
+    await initLoader.initLoad()
+  })
   // 使用头部高度管理
   const { desktopHeaderRef, mobileHeaderRef, currentHeaderHeight, measureHeaderHeight } =
     useHeaderHeight()
-
-  // 测试鼠标跟随特效
-  const testCursorTrail = () => {
-    console.log('💖 测试爱心跟随特效')
-    alert(
-      '请移动鼠标查看可爱的爱心跟随效果！💖 如果没有看到效果，请检查浏览器控制台是否有错误信息。'
-    )
-  }
 </script>
 <style lang="scss" scoped>
   @import './responsive-styles.scss';
