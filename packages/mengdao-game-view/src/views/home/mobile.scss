@@ -14,7 +14,7 @@
     margin-bottom: 20px;
     margin-top: 10px;
     background-color: #fefefe;
-    height: 120px;
+    min-height: 120px;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(255, 182, 193, 0.2);
     position: relative;
@@ -23,77 +23,187 @@
     justify-content: center;
     align-items: center;
     border-bottom: 2px solid #f0c8d2;
+    padding: 15px 10px;
+
+    &:hover:before {
+      transform: scale(1.1) rotate(5deg);
+      opacity: 1;
+    }
+
+    &:hover:after {
+      transform: scale(1.1) rotate(-5deg);
+      opacity: 1;
+    }
 
     &:before {
-      content: '🌸';
-      font-size: 24px;
+      content: '';
+      width: 30px;
+      height: 30px;
       position: absolute;
       top: 8px;
-      left: 20px;
-      color: #f0c8d2;
+      left: 15px;
+      background: url('../../assets/hua1.png') no-repeat center center;
+      background-size: contain;
+      opacity: 0.8;
+      transition: all 0.3s ease;
     }
 
     &:after {
-      content: '🌼';
-      font-size: 24px;
+      content: '';
+      width: 30px;
+      height: 30px;
       position: absolute;
       bottom: 8px;
-      right: 20px;
-      color: #f0dcb0;
+      right: 15px;
+      background: url('../../assets/hua2.png') no-repeat center center;
+      background-size: contain;
+      opacity: 0.8;
+      transition: all 0.3s ease;
     }
 
     h1 {
-      font-size: 28px;
+      font-size: 24px;
       font-weight: 700;
-      background: linear-gradient(90deg, #ff69b4 0%, #87ceeb 100%);
+      background: linear-gradient(135deg, #f1aedf 0%, #d682bf 52%, #a0a8e9 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       margin-bottom: 8px;
-      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      filter: drop-shadow(1px 0px 1px #f2dcf6);
+      flex-wrap: wrap;
 
-      &:before {
-        content: '✨';
-        position: absolute;
-        left: -30px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 18px;
-        color: #dcc8e6;
+      .hero-left {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1) rotate(5deg);
+        }
       }
 
-      &:after {
-        content: '✨✨✨';
-        position: absolute;
-        right: -45px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 16px;
-        color: #dcc8e6;
+      .hero-right {
+        width: 36px;
+        height: 30px;
+        object-fit: contain;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1) rotate(-5deg);
+        }
       }
     }
 
     p {
-      font-size: 14px;
+      font-size: 13px;
       line-height: 1.4;
       max-width: 100%;
       margin: 0 auto;
-      background: linear-gradient(90deg, #ff69b4 0%, #87ceeb 100%);
+      background: linear-gradient(135deg, #f1aedf 0%, #d682bf 52%, #a0a8e9 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      filter: drop-shadow(0.5px 0px 0.5px #f2dcf6);
+      padding: 0 10px;
 
-      &:before {
-        content: '...';
-        color: #bea0d2;
-        margin-right: 8px;
+      .dots-left {
+        position: relative;
+        width: 20px;
+        height: 12px;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+
+        .dot {
+          position: absolute;
+          border-radius: 50%;
+          top: 50%;
+          transform: translateY(-50%);
+
+          &:nth-child(1) {
+            width: 3px;
+            height: 3px;
+            background: #f1aedf;
+            opacity: 0.9;
+            left: 1px;
+            top: 65%;
+            animation: dotPulseMobile1 2s ease-in-out infinite;
+          }
+
+          &:nth-child(2) {
+            width: 3px;
+            height: 3px;
+            background: #d682bf;
+            opacity: 0.9;
+            left: 8px;
+            top: 55%;
+            animation: dotPulseMobile2 2s ease-in-out infinite 0.3s;
+          }
+
+          &:nth-child(3) {
+            width: 3px;
+            height: 3px;
+            background: #a0a8e9;
+            opacity: 0.9;
+            left: 15px;
+            animation: dotPulseMobile3 2s ease-in-out infinite 0.6s;
+          }
+        }
       }
 
-      &:after {
-        content: '...';
-        color: #bea0d2;
-        margin-left: 8px;
+      .dots-right {
+        position: relative;
+        width: 20px;
+        height: 12px;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+
+        .dot {
+          position: absolute;
+          border-radius: 50%;
+          top: 50%;
+          transform: translateY(-50%);
+          &:nth-child(1) {
+            width: 3px;
+            height: 3px;
+            background: #a0a8e9;
+            opacity: 0.9;
+            left: 1px;
+
+            animation: dotPulseMobile3 2s ease-in-out infinite 0.6s;
+          }
+
+          &:nth-child(2) {
+            width: 3px;
+            height: 3px;
+            background: #d682bf;
+            opacity: 0.9;
+            left: 8px;
+            top: 55%;
+            animation: dotPulseMobile4 2s ease-in-out infinite 0.9s;
+          }
+
+          &:nth-child(3) {
+            width: 3px;
+            height: 3px;
+            background: #f1aedf;
+            opacity: 0.9;
+            left: 15px;
+            top: 65%;
+            animation: dotPulseMobile1 2s ease-in-out infinite 1.2s;
+          }
+        }
       }
     }
   }
@@ -307,5 +417,54 @@
         padding: 10px 0px;
       }
     }
+  }
+}
+
+// 移动端点装饰的动画效果
+@keyframes dotPulseMobile1 {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.3);
+  }
+}
+
+@keyframes dotPulseMobile2 {
+  0%,
+  100% {
+    opacity: 0.7;
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.2);
+  }
+}
+
+@keyframes dotPulseMobile3 {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.3);
+  }
+}
+
+@keyframes dotPulseMobile4 {
+  0%,
+  100% {
+    opacity: 0.7;
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.2);
   }
 }

@@ -1,15 +1,27 @@
 <template>
   <div class="page-root" :class="{ 'desktop-container': isDesktop, 'mobile-container': isMobile }">
     <SimpleCursorTrail />
-      <div class="content-container">
+    <div class="content-container">
       <DesktopHeader v-if="isDesktop" ref="desktopHeaderRef" />
       <MobileHeader v-if="isMobile" ref="mobileHeaderRef" />
       <section class="hero">
-        <h1>✨ 歡迎來到萌夢島 ✨</h1>
+        <h1>
+          <img class="hero-left" :src="imageList.hero.titleLeft.url" />
+          歡迎來到萌夢島
+          <img class="hero-right" :src="imageList.hero.titleRight.url" />
+        </h1>
         <p>
-          <span class="dots-left"></span>
-          🎮 最棒的楓之谷體驗，等你來探索可愛的冒險世界！ 🌸
-          <span class="dots-right"></span>
+          <span class="dots-left">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </span>
+          最棒的楓之谷體驗，等你來探索可愛的冒險世界
+          <span class="dots-right">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </span>
         </p>
       </section>
       <section class="story-section">
@@ -87,7 +99,7 @@
           </button>
         </div>
       </section>
-      
+
       <!-- 测试特效按钮 -->
       <section class="section test-section">
         <h2>🌟 特效测试 🌟</h2>
@@ -96,7 +108,7 @@
             <span class="btn-icon">💖</span>
             <span class="btn-text">测试爱心跟随特效</span>
           </button>
-          <router-link to="/cursor-test" class="common-button1" style="text-decoration: none;">
+          <router-link to="/cursor-test" class="common-button1" style="text-decoration: none">
             <span class="btn-icon">🧪</span>
             <span class="btn-text">进入测试页面</span>
           </router-link>
@@ -121,6 +133,14 @@
     useHeaderHeight()
 
   const imageList = ref({
+    hero: {
+      titleLeft: {
+        url: new URL('@/assets/start1.png', import.meta.url).href,
+      },
+      titleRight: {
+        url: new URL('@/assets/contet-icon.png', import.meta.url).href,
+      },
+    },
     gameInfo: {
       url: new URL('@/assets/pc-image/game-info.png', import.meta.url).href,
     },
@@ -148,11 +168,13 @@
       },
     ],
   })
-  
+
   // 测试鼠标跟随特效
   const testCursorTrail = () => {
     console.log('💖 测试爱心跟随特效')
-    alert('请移动鼠标查看可爱的爱心跟随效果！💖 如果没有看到效果，请检查浏览器控制台是否有错误信息。')
+    alert(
+      '请移动鼠标查看可爱的爱心跟随效果！💖 如果没有看到效果，请检查浏览器控制台是否有错误信息。'
+    )
   }
 </script>
 <style lang="scss" scoped>
