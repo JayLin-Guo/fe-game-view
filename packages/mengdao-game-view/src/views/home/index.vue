@@ -1,5 +1,8 @@
 <template>
-  <div class="page-root" :class="{ 'desktop-container': isDesktop, 'mobile-container': isMobile }">
+  <div
+    class="page-root custom-scrollbar"
+    :class="{ 'desktop-container': isDesktop, 'mobile-container': isMobile }"
+  >
     <!-- Loading 组件 -->
     <LetterLoading
       :visible="initLoader.loading.value"
@@ -56,7 +59,7 @@
         </div>
       </section>
 
-      <section class="section" id="news">
+      <section class="section glow-scrollbar" id="news">
         <h2>
           <img class="title-icon" :src="imageList.hIcon.url" />
           <span> 最新消息</span>
@@ -76,7 +79,7 @@
         </div>
       </section>
 
-      <section class="section download-section" id="download">
+      <section class="section download-section thin-scrollbar" id="download">
         <h2>
           <img class="title-icon" :src="imageList.hIcon.url" />
           <span>下載專區</span>
@@ -98,7 +101,7 @@
         </div>
       </section>
 
-      <section class="section community-section" id="community">
+      <section class="section community-section custom-scrollbar" id="community">
         <h2>
           <img class="title-icon" :src="imageList.hIcon.url" />
           <span>加入我們的社群</span>

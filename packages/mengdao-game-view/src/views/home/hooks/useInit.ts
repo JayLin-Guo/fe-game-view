@@ -14,7 +14,9 @@ export const useInitLoad = () => {
     } catch (error) {
       console.error('初始化加载失败:', error)
     } finally {
-      loading.value = false
+      setTimeout(() => {
+        loading.value = false
+      }, 1000)
     }
   }
 
